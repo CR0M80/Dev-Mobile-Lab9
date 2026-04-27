@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <!-- Header Banner -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/primary"
+        android:padding="24dp"
+        android:paddingBottom="28dp">
+
+        <TextView
+            android:text="✏ Inscription Étudiant"
+            style="@style/HeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Remplissez le formulaire ci-dessous"
+            style="@style/HeaderSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Form Card -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Card container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/card_bg"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView android:text="NOM" style="@style/text"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <EditText android:id="@+id/nom" style="@style/input"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Entrez le nom"
+                    android:inputType="textPersonName" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+
+                <TextView android:text="PRÉNOM" style="@style/text"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <EditText android:id="@+id/prenom" style="@style/input"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:hint="Entrez le prénom"
+                    android:inputType="textPersonName" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+
+                <TextView android:text="VILLE" style="@style/text"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <Spinner android:id="@+id/ville" android:entries="@array/villes" style="@style/input"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+
+                <TextView android:text="SEXE" style="@style/text"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <RadioGroup android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:layout_marginBottom="8dp">
+                    <RadioButton android:id="@+id/m" android:text="Homme"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:buttonTint="@color/primary"
+                        android:textColor="@color/text_primary"
+                        android:checked="true"/>
+                    <RadioButton android:id="@+id/f" android:text="Femme"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:buttonTint="@color/accent"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginStart="24dp"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <Button
+                android:id="@+id/add"
+                android:text="➕  Ajouter l'étudiant"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/accent"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnListe"
+                android:text="📋  Voir la liste des étudiants"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
