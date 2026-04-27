@@ -276,7 +276,4 @@ Résultat attendu : `[]` ou liste JSON
 ✔ JSON parsing automatique avec Gson
 
 ---
-
-# 📌 Auteur
-
 Projet réalisé dans un cadre pédagogique — **SAAD** 🚀
